@@ -21,6 +21,7 @@ showProfile(obj){
         <td>
           <img src="${result.download_url}" width=50 height=50
         </td>
+        <td>${result.author}</td>
       </tr>`;
     });
   }
