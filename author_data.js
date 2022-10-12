@@ -8,7 +8,7 @@ getDatalist(){
 async getProfile(){
   let response = await fetch(this.data);
   if (!response.ok){
-    throw new Error('HTTP error status: $(response.status)');
+    throw new Error(`HTTP error status: $(response.status)`);
   }
   return await response.json();
 }
@@ -22,6 +22,8 @@ showProfile(obj){
           <img src="${result.download_url}" width=50 height=50
         </td>
       </tr>`;
-    })
+    });
   }
 }
+
+export default AuthorData;
